@@ -456,7 +456,7 @@ def sequential_container_conversion(config,
     if (converted_layers is None):
         converted_layers = []
     name_prefix=name
-    for layer_idx, layer_config in enumerate(config):
+    for layer_idx, layer_config in enumerate(config[1:]):
         modes_to_pass = {'dense_mxts_mode': dense_mxts_mode,
                          'conv_mxts_mode': conv_mxts_mode,
                          'nonlinear_mxts_mode': nonlinear_mxts_mode,
